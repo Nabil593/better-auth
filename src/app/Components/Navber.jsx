@@ -29,10 +29,10 @@ const Navber = () => {
 
                     <div>
                         {user
-                            ? <>
+                            ? <div>
                                 <h1>Welcome {user.name}!</h1>
                                 <button onClick={() => signOut()}>Singout</button>
-                            </>
+                            </div>
                             : <Link href="/auth/signin">Sign In</Link>}
                     </div>
                 </header>
