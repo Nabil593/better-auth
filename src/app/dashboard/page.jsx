@@ -1,5 +1,6 @@
 import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
 
 const DashboardPage = async() => {
 
@@ -12,6 +13,7 @@ const DashboardPage = async() => {
     const user = session?.user
 
     if(!user) {
+        redirect("/auth/signin")
         return <div>Pleace Sign in to the dashboard</div>
     }
 
